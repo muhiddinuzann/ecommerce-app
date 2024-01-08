@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Navbar from "./Components/Navbar/Navbar";
+import PageContainer from "./Containers/PageContainer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Detail from "./Pages/Detail";
+import PageNotFound from "./Pages/PageNotFound";
+import Cart from "./Pages/Cart";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="e-commerce">
+      <PageContainer>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product/:id" element={<Detail/>}/>
+            <Route path="/cart" element={<Cart/>}/>
+            <Route path="*" element={<PageNotFound/>}/>
+          </Routes>
+        </BrowserRouter>
+      </PageContainer>
+
     </div>
   );
 }
