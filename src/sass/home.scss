@@ -149,7 +149,7 @@ body {
         &__counter{
           @apply flex;
           input{
-            @apply border  outline-none h-7 w-[100px] p-1 items-center text-center;
+            @apply border rounded-none outline-none h-7 w-[100px] p-1 items-center text-center;
           }
           button{
             @apply border p-1 h-7 w-7 justify-center flex items-center;
