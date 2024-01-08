@@ -58,12 +58,7 @@ function DetailComp({ productDetail }) {
               Add to cart
             </button>
           </div>
-          <div className="e-commerce__container__productsdetail--text__buttons__addwishlist">
-            <button>
-              <BsBagHeart/>
-              Add to wishlist
-            </button>
-          </div>
+      
         </div>
       </div>
     </div>

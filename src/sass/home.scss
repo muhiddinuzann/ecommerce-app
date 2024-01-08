@@ -137,16 +137,7 @@ body {
         &__buttons{
           @apply flex xl:flex-row xs:flex-col gap-2;
           &__addcart{
-            @apply xl:w-1/2 xs:w-full;
-            button{
-              @apply bg-slate-900 w-full text-white p-2 rounded-md flex gap-3 items-center justify-center;
-              &:hover{
-                @apply bg-slate-400 transition-all duration-500;
-              }
-            }
-          }
-          &__addwishlist{
-            @apply xl:w-1/2 xs:w-full;
+            @apply xl:w-full xs:w-full;
             button{
               @apply bg-slate-900 w-full text-white p-2 rounded-md flex gap-3 items-center justify-center;
               &:hover{
